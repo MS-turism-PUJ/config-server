@@ -12,7 +12,7 @@
 	<artifactId>config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>config-server</name>
-	<description>Config manager server</description>
+	<description>Config manager server for turismo project</description>
 	<url/>
 	<licenses>
 		<license/>

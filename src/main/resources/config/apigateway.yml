@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: apigateway
+  cloud:
+    gateway:
+      # Integration with eureka to automatically discover all the routes of the microservices
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+server:
+  port: 8080
+
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+# App metadata
+info:
+  app:
+    name: Gateway server
+    description: Gateway server
+    version: 1.0.0
+  company:
+    name: Turismo
+    contact:
+      email: support@turismo.com
+      phone: +1234567890
+  build:
+    time: ${BUILD_TIME:2024-08-21T12:30:00Z}
