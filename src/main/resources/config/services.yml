@@ -1,6 +1,17 @@
 spring:
   application:
     name: services
+  datasource:
+    url: jdbc:postgresql://${SERVICES_DB_HOST:localhost}:${SERVICES_DB_PORT:5433}/${SERVICES_DB_NAME:services}
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
 
 server:
   # To avoid colliding with other apps in port 8080
