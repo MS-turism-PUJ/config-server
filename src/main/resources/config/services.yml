@@ -7,11 +7,12 @@ spring:
     password: "${DB_PASSWORD}"
     driver-class-name: org.postgresql.Driver
   jpa:
+    generate-ddl: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
 
 server:
   # To avoid colliding with other apps in port 8080
