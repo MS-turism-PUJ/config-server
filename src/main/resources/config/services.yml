@@ -2,9 +2,9 @@ spring:
   application:
     name: services
   datasource:
-    url: jdbc:postgresql://${SERVICES_DB_HOST:localhost}:${SERVICES_DB_PORT:5433}/${SERVICES_DB_NAME:services}
-    username: ${DB_USER:root}
-    password: ${DB_PASSWORD:root}
+    url: "${SERVICES_DB_URL}"
+    username: "${DB_USER}"
+    password: "${DB_PASSWORD}"
     driver-class-name: org.postgresql.Driver
   jpa:
     properties:

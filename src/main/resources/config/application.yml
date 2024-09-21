@@ -1,7 +1,3 @@
-spring:
-  config:
-    import: file:../.env[.properties]
-
 eureka:
   client:
     # To report to Eureka when this service is up

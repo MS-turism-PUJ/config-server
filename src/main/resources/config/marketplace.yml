@@ -2,9 +2,9 @@ spring:
   application:
     name: marketplace
   datasource:
-    url: jdbc:postgresql://${MARKETPLACE_DB_HOST:localhost}:${MARKETPLACE_DB_PORT:5434}/${MARKETPLACE_DB_NAME:marketplace}
-    username: ${DB_USER:root}
-    password: ${DB_PASSWORD:root}
+    url: "${MARKETPLACE_DB_URL}"
+    username: "${DB_USER:root}"
+    password: "${DB_PASSWORD:root}"
     driver-class-name: org.postgresql.Driver
   jpa:
     properties:
