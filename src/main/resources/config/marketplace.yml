@@ -16,6 +16,20 @@ spring:
   graphql:
     graphiql:
       enabled: true
+  cloud:
+    stream:
+      bindings:
+        # https://docs.spring.io/spring-cloud-stream/reference/spring-cloud-stream/functional-binding-names.htm
+        # Format: <method name>-<in or out>-<index>
+        # receiveMessage: name of the method that receives the message
+        # in: because is a consumer
+        # 0: Index of the binding. This allows the same method to receive from multiple queues
+        receiveMessage-in-1:
+          destination: usersQueue
+          # Group is necessary to ensure that this
+          # consumer receives all messages sent while
+          # it was offline
+          group: marketplace-group
 
 server:
   # To avoid colliding with other apps in port 8080
