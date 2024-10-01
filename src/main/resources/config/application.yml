@@ -34,3 +34,11 @@ management:
     metrics:
       export:
         enabled: true
+
+minio:
+  bucket:
+    name: photos
+  access:
+    key: ${MINIO_ACCESS_KEY}
+    secret: ${MINIO_SECRET_KEY}
+  url: http://localhost:9001
