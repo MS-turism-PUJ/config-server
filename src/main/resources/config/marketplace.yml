@@ -33,6 +33,9 @@ spring:
         receiveMessage-in-2:
           destination: servicesQueue
           group: marketplace-group
+        receiveMessage-in-3:
+          destination: contentsQueue
+          group: marketplace-group
 
 server:
   # To avoid colliding with other apps in port 8080
