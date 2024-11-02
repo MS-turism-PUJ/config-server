@@ -5,6 +5,11 @@ spring:
         binder:
           brokers: localhost:9092
 
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
 eureka:
   client:
     # To report to Eureka when this service is up
