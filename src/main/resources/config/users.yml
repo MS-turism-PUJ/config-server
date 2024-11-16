@@ -24,6 +24,7 @@ keycloak:
   admin:
     username: "${KEYCLOAK_ADMIN}"
     password: "${KEYCLOAK_ADMIN_PASSWORD}"
+  auth-server-url: http://localhost:9000
 
 server:
   # To avoid colliding with other apps in port 8080
